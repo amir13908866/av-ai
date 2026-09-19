@@ -1,0 +1,22 @@
+{
+  "name": "av-ai-windows",
+  "version": "1.0.0",
+  "description": "AV AI Windows client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.avai.windows",
+    "productName": "AV AI",
+    "files": ["main.js", "config.json", "src/**/*"],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.env
+node_modules/
+electron-app/dist/
+central-api/target/
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src *;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AV AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section id="authView" class="card">
+      <div class="brand">AV AI</div>
+      <div id="registerPane">
+        <h1>ثبت‌نام</h1>
+        <input id="regUsername" placeholder="نام کاربری انگلیسی" autocomplete="username" />
+        <input id="regDisplay" placeholder="نام نمایشی" />
+        <input id="regPassword" type="password" placeholder="رمز عبور (حداقل ۶ کاراکتر)" autocomplete="new-password" />
+        <button id="registerBtn">ثبت‌نام</button>
+        <p id="registerMsg" class="msg"></p>
+        <button class="link" id="toLogin">حساب دارم؛ ورود</button>
+      </div>
+
+      <div id="loginPane" class="hidden">
+        <h1>ورود</h1>
+        <input id="loginUsername" placeholder="نام کاربری" autocomplete="username" />
+        <input id="loginPassword" type="password" placeholder="رمز عبور" autocomplete="current-password" />
+        <button id="requestCodeBtn">دریافت کد ورود</button>
+        <p id="loginMsg" class="msg"></p>
+        <div id="codePane" class="hidden codebox">
+          <div class="codeNotice">کد تأیید روی ویندوز نمایش داده شده است.</div>
+          <input id="codeInput" inputmode="numeric" maxlength="6" placeholder="کد ۶ رقمی" />
+          <button id="verifyBtn">تأیید و ورود</button>
+        </div>
+        <button class="link" id="toRegister">ثبت‌نام جدید</button>
+      </div>
+    </section>
+
+    <section id="chatView" class="card hidden chat">
+      <header>
+        <div>
+          <div class="brand small">AV AI</div>
+          <div id="welcome"></div>
+        </div>
+        <button id="logoutBtn" class="secondary">خروج</button>
+      </header>
+      <div id="messages" class="messages"></div>
+      <div class="composer">
+        <textarea id="question" rows="3" placeholder="سؤال خود را بنویس..."></textarea>
+        <button id="askBtn">ارسال</button>
+      </div>
+      <p id="chatMsg" class="msg"></p>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

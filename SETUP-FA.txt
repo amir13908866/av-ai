@@ -1,0 +1,10 @@
+AV AI — ترتیب راه‌اندازی
+
+1) پوشه central-api را روی GitHub قرار بده.
+2) در Render یک Web Service از همین repository بساز یا Blueprint را با render.yaml اجرا کن.
+3) OPENROUTER_API_KEY را فقط در Environment سرور قرار بده.
+4) برای حساب‌های دائمی یک PostgreSQL بساز و DATABASE_URL و DB_* را تنظیم کن.
+5) بعد از Deploy، آدرس API را بردار.
+6) در electron-app/config.json فقط apiUrl را با همان آدرس عوض کن.
+7) داخل electron-app اجرا کن: npm install سپس npm start
+8) برای Setup ویندوز: npm run dist

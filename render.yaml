@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: av-ai-central-api
+    runtime: docker
+    dockerfilePath: ./central-api/Dockerfile
+    dockerContext: ./central-api
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: openrouter/free

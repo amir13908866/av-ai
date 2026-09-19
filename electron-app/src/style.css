@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Segoe UI, Tahoma, Arial, sans-serif; background: radial-gradient(circle at top, #17213e, #070a12 60%); color: #eef2ff; min-height: 100vh; }
+.shell { width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px; }
+.card { width: min(760px, 100%); background: rgba(14, 20, 38, .94); border: 1px solid #283556; border-radius: 22px; padding: 32px; box-shadow: 0 24px 70px rgba(0,0,0,.4); }
+.brand { font-size: 38px; font-weight: 800; letter-spacing: .5px; margin-bottom: 18px; }
+.brand.small { font-size: 25px; margin-bottom: 4px; }
+h1 { margin: 0 0 18px; font-size: 28px; }
+input, textarea { width: 100%; background: #0a1020; color: #fff; border: 1px solid #32405f; border-radius: 12px; padding: 13px 14px; font-size: 16px; margin: 7px 0; outline: none; }
+textarea { resize: vertical; min-height: 74px; }
+input:focus, textarea:focus { border-color: #7185ff; }
+button { border: 0; border-radius: 12px; padding: 13px 18px; font-size: 16px; cursor: pointer; background: #6f7dff; color: white; font-weight: 700; margin-top: 10px; }
+button:hover { filter: brightness(1.07); }
+button.secondary { background: #26314e; }
+button.link { background: transparent; padding: 7px 0; color: #a8b3ff; font-weight: 600; }
+.hidden { display: none !important; }
+.msg { min-height: 22px; color: #b9c7ff; }
+.codebox { margin-top: 12px; padding: 14px; background: #101931; border: 1px dashed #4d5f8c; border-radius: 14px; }
+.codeNotice { margin-bottom: 4px; color: #dce3ff; }
+.chat { width: min(1000px, 100%); min-height: 640px; display: flex; flex-direction: column; }
+.chat header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.messages { flex: 1; overflow-y: auto; margin: 22px 0; padding: 12px; background: #090e1c; border-radius: 16px; border: 1px solid #222f4b; min-height: 360px; }
+.message { max-width: 85%; padding: 13px 15px; border-radius: 15px; margin: 8px 0; white-space: pre-wrap; line-height: 1.7; }
+.message.user { margin-left: auto; background: #27345b; }
+.message.ai { margin-right: auto; background: #111a2d; border: 1px solid #263555; }
+.composer { display: grid; grid-template-columns: 1fr 110px; gap: 10px; align-items: end; }
+@media (max-width: 700px) { .shell { padding: 14px; } .card { padding: 20px; } .composer { grid-template-columns: 1fr; } }
